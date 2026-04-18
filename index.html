@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Space Dashboard</title>
+    <title>Space Finance - Dashboard</title>
     
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="footer.css">
-    
+
     <style>
-        /* CSS Tambahan untuk Background & Layout Utama */
+        /* CSS Utama untuk menyatukan semuanya */
         body {
             margin: 0;
             padding: 0;
-            background: #090A0F;
+            background-color: #090A0F; /* Warna dasar angkasa */
             color: white;
-            font-family: 'Segoe UI', sans-serif;
-            padding-bottom: 80px; /* Supaya konten nggak ketutup footer */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 80px; /* Biar gak ketutup header */
+            padding-bottom: 100px; /* Biar gak ketutup footer */
+            overflow-x: hidden;
         }
-        
+
+        /* Latar Belakang Bintang Bergerak */
         .space-bg {
             position: fixed;
             top: 0;
@@ -29,11 +32,30 @@
             background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
             z-index: -1;
         }
+
+        .shooting-star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 2px;
+            background: white;
+            box-shadow: 0 0 10px white;
+            animation: shoot 5s linear infinite;
+        }
+
+        @keyframes shoot {
+            0% { transform: translateX(100vw) translateY(-100vh); opacity: 1; }
+            20% { transform: translateX(-100vw) translateY(100vh); opacity: 0; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="space-bg"></div>
+    <div class="space-bg">
+        <div class="shooting-star"></div>
+    </div>
 
     <header class="space-header">
         <div class="header-container">
@@ -48,8 +70,8 @@
             </div>
             <nav class="space-nav">
                 <ul>
-                    <li><a href="#" class="nav-link">🚀 Dashboard</a></li>
-                    <li><a href="#" class="nav-link login-google">G Login</a></li>
+                    <li><a href="#" class="nav-link"><span class="icon">🚀</span> Dashboard</a></li>
+                    <li><a href="#" class="nav-link login-google"><span class="icon">G</span> Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,20 +83,46 @@
                 <div class="card-icon">💸</div>
                 <h3>Pengeluaran</h3>
                 <p class="amount">Rp 0</p>
+                <span class="card-label">Bulan Ini</span>
             </div>
+
             <div class="card card-blue">
-                <div class="card-icon">💰</div>
+                <div class="card-icon">💰</div> 
                 <h3>Tabungan</h3>
                 <p class="amount">Rp 0</p>
+                <span class="card-label">Total Saldo</span>
+            </div>
+
+            <div class="card card-green">
+                <div class="card-icon">✨</div>
+                <h3>Target</h3>
+                <p class="amount">Coming Soon</p>
+                <span class="card-label">Misi Kamu</span>
             </div>
         </div>
     </main>
 
     <footer class="space-footer">
         <div class="footer-nav">
-            <button class="footer-item active">🏠<p>Home</p></button>
-            <button class="footer-item add-btn">🛸</button>
-            <button class="footer-item">⚙️<p>Setting</p></button>
+            <button class="footer-item active">
+                <span class="f-icon">🏠</span>
+                <p>Home</p>
+            </button>
+            <button class="footer-item">
+                <span class="f-icon">📊</span>
+                <p>Stats</p>
+            </button>
+            <button class="footer-item add-btn">
+                <span class="f-icon">🛸</span>
+            </button>
+            <button class="footer-item">
+                <span class="f-icon">🔔</span>
+                <p>Notif</p>
+            </button>
+            <button class="footer-item">
+                <span class="f-icon">⚙️</span>
+                <p>Setting</p>
+            </button>
         </div>
     </footer>
 
