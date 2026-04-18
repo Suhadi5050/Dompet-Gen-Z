@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Space Dashboard</title>
+    
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <style>
+        /* CSS Tambahan untuk Background & Layout Utama */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #090A0F;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            padding-bottom: 80px; /* Supaya konten nggak ketutup footer */
+        }
+        
+        .space-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="space-bg"></div>
+
+    <header class="space-header">
+        <div class="header-container">
+            <div class="user-profile">
+                <div class="profile-pic-wrapper">
+                    <img src="https://via.placeholder.com/50" alt="Profile" class="profile-img">
+                </div>
+                <div class="user-info">
+                    <span class="welcome-text">Halo, Selamat Datang!</span>
+                    <h1 class="user-name">User Explorer</h1>
+                </div>
+            </div>
+            <nav class="space-nav">
+                <ul>
+                    <li><a href="#" class="nav-link">🚀 Dashboard</a></li>
+                    <li><a href="#" class="nav-link login-google">G Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="card-grid">
+            <div class="card card-purple">
+                <div class="card-icon">💸</div>
+                <h3>Pengeluaran</h3>
+                <p class="amount">Rp 0</p>
+            </div>
+            <div class="card card-blue">
+                <div class="card-icon">💰</div>
+                <h3>Tabungan</h3>
+                <p class="amount">Rp 0</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="space-footer">
+        <div class="footer-nav">
+            <button class="footer-item active">🏠<p>Home</p></button>
+            <button class="footer-item add-btn">🛸</button>
+            <button class="footer-item">⚙️<p>Setting</p></button>
+        </div>
+    </footer>
+
+</body>
+</html>

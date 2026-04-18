@@ -1,0 +1,47 @@
+.space-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 14, 20, 0.95);
+    border-top: 1px solid rgba(0, 206, 209, 0.3);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-item {
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.f-icon {
+    font-size: 1.2rem;
+    display: block;
+}
+
+.footer-item p {
+    font-size: 0.7rem;
+    margin-top: 4px;
+}
+
+.footer-item.active {
+    color: #00ced1;
+}
+
+.add-btn {
+    background: linear-gradient(45deg, #8a2be2, #00ced1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+}

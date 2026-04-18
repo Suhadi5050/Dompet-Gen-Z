@@ -1,0 +1,94 @@
+/* Styling Dasar Header */
+.space-header {
+    background-color: #0b0e14; /* Biru dongker sangat gelap */
+    color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3); /* Border ungu tipis */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* User Profil & Glow Effect */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pic-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #8a2be2, #00ced1); /* RGB Kalem: Ungu & Biru Muda */
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0b0e14;
+}
+
+.welcome-text {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    display: block;
+}
+
+.user-name {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Navigasi */
+.space-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: RGB Glow Kalem */
+.nav-link:hover {
+    color: #00ced1; /* Biru muda saat hover */
+    text-shadow: 0 0 8px rgba(0, 206, 209, 0.6);
+}
+
+.login-google {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 206, 209, 0.4);
+}
+
+.login-google:hover {
+    background: rgba(0, 206, 209, 0.2);
+    border-color: #00ced1;
+}
+
+.icon {
+    font-size: 1.1rem;
+}
